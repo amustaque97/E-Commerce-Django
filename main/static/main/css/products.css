@@ -1,0 +1,195 @@
+background: #e7f8ff;
+}
+
+ol {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+#global-menu {
+background: white;
+display: flex;
+justify-content: flex-start;
+flex-direction: row;
+padding-left: 20%;
+width: 80%;
+}
+
+#global-menu li {
+border-bottom: 3px solid transparent;
+color: #3b4e61;
+font-family: 'Lato', sans-serif;
+font-size: 21px;
+font-weight: 700;
+padding: 15px 10px;
+text-transform: uppercase;
+}
+
+#global-menu li:hover {
+border-bottom-color: red;
+}
+
+@media (max-width: 767px) {
+#global-menu li:not(.my-sonic) {
+  visibility: hidden;
+}
+}
+#global-menu li a {
+color: inherit;
+text-decoration: none;
+}
+
+#global-menu li:last-child {
+border-bottom: 0;
+margin-left: auto;
+}
+
+#global-menu li:last-child a {
+background-color: red;
+border-radius: 4px;
+color: white;
+padding: 6px;
+}
+
+#global-menu li:last-child a:hover {
+background-color: #990000;
+}
+
+#menu-categories {
+margin-top: 3%;
+background: white;
+overflow-y: hidden;
+overflow-x: auto;
+}
+
+#menu-categories ol {
+display: flex;
+height: 98px;
+min-width: 900px;
+width: 100%;
+}
+
+@media (min-width: 768px) {
+#menu-categories ol {
+  height: 198px;
+  min-width: 1200px;
+}
+}
+#menu-categories li {
+border: 1px solid #f5f5f5;
+border-left: 0;
+display: flex;
+flex-direction: column-reverse;
+flex: 1;
+padding: 20px 0;
+align-items: center;
+}
+
+#menu-categories li:hover, #menu-categories li.active {
+background-image: radial-gradient(ellipse at center, #ffffff 40%, rgba(255, 235, 181, 0.6) 100%);
+}
+
+#menu-categories li.drinks:hover, #menu-categories li.drinks.active:hover {
+background-image: radial-gradient(ellipse at center, #ffffff 40%, #d6e5f3 100%);
+}
+
+#menu-categories li.ice-cream:hover, #menu-categories li.ice-cream.active:hover {
+background-image: radial-gradient(ellipse at center, #ffffff 40%, #f5efff 100%);
+}
+
+#menu-categories .food-category-name {
+color: #3b4e61;
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+}
+
+@media (min-width: 768px) {
+#menu-categories .food-category-name {
+  font-size: 14px;
+  margin-top: 20px;
+}
+}
+#menu-categories img {
+max-width: 50%;
+}
+
+@media (min-width: 768px) {
+#menu-categories img {
+  max-width: 100px;
+}
+}
+.menu-items {
+padding-top: 72px;
+text-align: center;
+}
+
+.menu-items h2 {
+color: #3B4E6F;
+font-family: 'Lato', sans-serif;
+font-size: 48px;
+line-height: 52px;
+margin: 0 0 20px;
+}
+
+.menu-items p {
+color: #3B4E6F;
+margin: 0 auto;
+max-width: 550px;
+opacity: .6;
+}
+
+.menu-item-listing {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+margin: 32px auto 48px;
+width: 90vw;
+}
+
+@media (min-width: 1388px) {
+.menu-item-listing {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200%;
+}
+}
+.menu-item-listing li {
+background-color: white;
+border: 1px solid #f5f5f5;
+border-left: 0;
+border-top: 0;
+display: flex;
+flex-direction: column-reverse;
+flex: 1;
+padding: 20px 0;
+position: relative;
+align-items: center;
+justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+.menu-item-listing li {
+  min-height: calc(90vw / 4);
+}
+}
+.menu-item-listing li:hover {
+background-image: radial-gradient(ellipse at center, #ffffff 40%, rgba(255, 235, 181, 0.6) 100%);
+box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.menu-item-listing li:hover img {
+transform: translateY(-10px);
+}
+
+.menu-item-listing .menu-item-name {
+color: #3b4e61;
+font-family: 'Lato', sans-serif;
+font-size: 16px;
+line-height: 22px;
+margin: 0 10px;
+}
+
+.menu-item-listing img {
+max-width: 70%;
+max-height: 230px;
+transition: all .25s ease-in;
+}

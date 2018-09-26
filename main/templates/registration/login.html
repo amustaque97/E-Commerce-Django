@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% load socialaccount %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+  <style media="screen">
+    input {
+      height: 34px;
+      font-size: 24px;
+      border: none;
+      padding-left: 10px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<body id="">
+<div class="container">
+<h1 class="form-heading">Login Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h1>Login</h1>
+   <p>Please enter your email and password</p>
+   </div>
+    <form id="Login" method="post">
+
+        <div class="form-group">
+
+
+            {% csrf_token %}
+            {{ form.as_p }}
+</div>
+        <button type="submit" class="btn btn-primary">Login</button><br><br>
+        <a href="{% provider_login_url 'github' %}" class="btn" style="color:#fff;background:#000;display:block">Github</a>
+    </form>
+    <hr>
+    <a href="{% url 'signup' %}" style="float:left" >Register</a>
+    <a href="{% url 'password_reset' %}" style="float:right" >Forgot Password?</a>
+    </div>
+
+</div></div></div>
+
+{% endblock %}

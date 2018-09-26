@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: amustaque97@gmail.com
+Date: Sat, 22 Sep 2018 16:51:32 -0000
+Message-ID: <153763509223.28426.14735400404372090048@hoax>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/reset/MQ/4zt-09457e42e608750e07ac/
+
+Your username, in case you've forgotten: amustaque97
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------

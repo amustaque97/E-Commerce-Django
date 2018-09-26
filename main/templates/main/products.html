@@ -1,0 +1,96 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block css %}
+ <link rel="stylesheet" href="{% static 'main/css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- <ol id="global-menu">
+	<li><a href="#">Menu</a></li>
+	<li><a href="#">Locations</a></li>
+	<li><a href="#">Jobs</a></li>
+	<li><a href="#">Kids</a></li>
+	<li class="my-sonic"><a href="#">My Sonic</a></li>
+</ol> -->
+
+<nav id="menu-categories">
+	<ol>
+		<!-- <li>
+			<span class="food-category-name">All</span>
+			<img src="https://www.sonicdrivein.com/static/img/common/combo.png">
+		</li> -->
+		<li class="active">
+			<span class="food-category-name">Burgers</span>
+			<img src="https://lh3.googleusercontent.com/iXpM7AyZ6xcHp1rQ9RRUBve5TItpFxqSKYVJjRfaRRnBTEfToAnhltrKNSRemg1SO8yL55e10_NsknLk1IKq=s113" />
+		</li>
+		<li>
+			<span class="food-category-name">Hot Dogs</span>
+			<img src="https://lh5.ggpht.com/-_oqTokXPzwLcr5EXojx_w2nAOcvBtzofs496mBryXcXNQB497rjJX21uWT0nN87TQb5Fo48wNBLDYAtWk_Y=s113" />
+		</li>
+		<li>
+			<span class="food-category-name">Breakfast</span>
+			<img src="https://lh3.googleusercontent.com/PGn7fZ8PZuvN60nLNmXmTTx_WWRVUhW825NnfpgYUcg2Ln7NKKbbjb5G4M-53FcowiQEeYhcRJXl_s88dFs=s113" />
+		</li>
+		<li>
+			<span class="food-category-name">Chicken</span>
+			<img src="https://lh4.ggpht.com/0fBNgQdLFMT6RgMYAEvFj1cehTV4dYUSbZqY1ct3n6g8LtZsl3KoF9_Rp9dm5WY49iRIcSOt1-46TmghCKM=s113" />
+		</li>
+		<li>
+			<span class="food-category-name">Snacks & Sides</span>
+			<img src="https://lh6.ggpht.com/dFWl3zlKe9uP8u0vAS6hb6CNxSBGYwopAgSfTTEzIhQ0QJdXv85r0lStE01kXN4-nrfm-2fhdPt74AoL0YM=s113" />
+		</li>
+		<li class="drinks">
+			<span class="food-category-name">Drinks</span>
+			<img src="https://lh4.ggpht.com/_TonK_CrZJ3b2gOheqIlL_llzpLQQCLaD_s-i4Bq6-KgnnYMgXZgD55uc1afR-EUi5SSvqFHVOKMd9jtCnBp=s113" />
+		</li>
+		<li class="ice-cream">
+			<span class="food-category-name">Ice Cream</span>
+			<img src="https://lh5.ggpht.com/DyLhzGmaZqyOvBeO2OMCu1iBME3eAH7fQT7eWxdu97M3Cz7qaAmQr-tgBIv8bL1DrEwbsnTrxd8BWlBnGc_U=s113" />
+		</li>
+		<li>
+			<span class="food-category-name">Wacky Pack ®</span>
+			<img src="https://lh6.ggpht.com/JJ5YqPfDpyOv09KgD3cHA4zZWXz1u1A3KOVucZVguoyxpaBoOddju3u_u9H1ROftKvev7OGL6GfXbP43zpra=s113" />
+		</li>
+	</ol>
+</nav>
+<section class="menu-items">
+	<h2>Burgers</h2>
+<p>Prepare to be delighted with 100% pure beef, melty cheese and fresh ingredients, all made to order.</p>
+	<ol class="menu-item-listing">
+		<li>
+			<span class="menu-item-name">Sonic® Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/GlXvLkghQncBfhlGBrZ3lQBOwuAK1fk-CEDOhRXRmrd2GneQky6i-I831rC648o8NhSgwcQhI1xo46j-ggXZ-Q=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name"><em>Super</em>Sonic® Double Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/iXpM7AyZ6xcHp1rQ9RRUBve5TItpFxqSKYVJjRfaRRnBTEfToAnhltrKNSRemg1SO8yL55e10_NsknLk1IKq=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name"><em>Super</em>Sonic® Bacon Double Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/Ele8gtDOd1tlQ4TebRJkf6XgpciDD2e57Jf5E3UwAzvfPs0kLhOXJLewZYsu1CFn9CPly0TLvrZUCqJnXMn0=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name">Sonic® Bacon Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/MXGR72JVHpz8XzGHFcsMRIBVYpdJuzaOoPqTz0yOb18ZwvztJyhGZQMtxKVeEXac_6WH5k73fZ39nqmlnNyb=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name">Jr. Burger</span>
+			<img src="https://lh3.googleusercontent.com/i-vHb3CryeDkJrTydwmJFJ1M1HrFtjAGIDC5xI7wI7bkOqV_iV0Zpr6jtm-9Lmv6n1pgkMBhJHSb2Ef1XMxLEQ=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name">Jr. Double Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/rZffPhtsT38VMvV40KZNzgzGpiR8LVeqcRYDVHKYoWoz6vuKj_0X2nTcpUrqfbnVKSpsPOiR6eyos1el_2UB=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name">Jr. Deluxe Cheeseburger</span>
+			<img src="https://lh3.googleusercontent.com/zEE3wNRoKGd8py4Jhod6HFaWf6iLjV3wtAjVZR-cC3pB0rRehlhBuKZOag8lL8af4XFAwEuSCl9kebbDpJibDg=s400" />
+		</li>
+		<li>
+			<span class="menu-item-name">Bacon Cheeseburger <em>TOASTER</em>®</span>
+			<img src="https://lh3.googleusercontent.com/87M6X6hiETZcuH7ViT87KncCMr7nnSOJH1djalKHDDfEAjUb2yBbSqBtofso_ecls1YClzOFaoAldam9Iskh_A=s400" />
+		</li>
+	</ol>
+</section>
+{% endblock %}

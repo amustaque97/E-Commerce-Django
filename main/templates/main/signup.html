@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+  <style media="screen">
+    input {
+      height: 34px;
+      font-size: 24px;
+      border: 1px solid #ccc;
+      padding-left: 10px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="col-sm-offset-5" style="margin-top:5%">
+  <h1 style="margin-left:12%" class="">Sign up</h1>
+  <p style="margin-left:12%">Please Enter Your Details</p>
+    <form method="post" class="">
+      {% csrf_token %}
+      {% for field in form %}
+        <p>
+          {{ field.label_tag }}
+          {{ field }}<br>
+          {% if field.help_text %}
+            <small style="color: grey">{{ field.help_text }}</small>
+          {% endif %}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
+        </p>
+      {% endfor %}
+      <button type="submit" class="btn btn-primary" style="margin-left:12%">Sign Up</button>
+    </form>
+</div>
+
+{% endblock %}

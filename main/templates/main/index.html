@@ -1,0 +1,174 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block css %}
+<!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+<link href="{% static 'main/css/custom.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<!-- Feature -->
+	<div class="jumbotron feature">
+		<div class="container">
+			{% for tag in hero %}
+			<h1><span class="glyphicon glyphicon-equalizer"></span>{{ tag.hero_tag }}</h1>
+			<p>{{ tag.hero_subtag }}</p>
+
+			<p><a class="btn btn-primary" href="#">Engage Now</a></p>
+		</div>
+	</div>
+
+
+    <!-- Heading -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">{{ tag.heading2 }}</h1>
+                <p class="lead text-center">{{ tag.heading2_description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promos -->
+	<div class="container-fluid">
+        <div class="row promo">
+        	<a href="#">
+				<div class="col-md-4 promo-item item-1">
+					<h3>
+						{{ tag.col1 }}
+					</h3>
+				</div>
+            </a>
+            <a href="#">
+				<div class="col-md-4 promo-item item-2">
+					<h3>
+						{{ tag.col2 }}
+					</h3>
+				</div>
+            </a>
+
+			<a href="#">
+				<div class="col-md-4 promo-item item-3">
+					<h3>
+						{{ tag.col3 }}
+					</h3>
+				</div>
+            </a>
+        </div>
+    </div><!-- /.container-fluid -->
+
+	<!-- Featured Products -->
+	<div class="container">
+		<h1 class="text-center">{{ tag.showcase_heading }}</h1>
+		<div class="row">
+
+			<!-- Product 1 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="{% static 'main/images/pepper.jpg' %}" alt="">
+					</a>
+					<div class="caption">
+						<h3>{{ tag.item1 }}</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$10.45</p>
+
+						<!-- Input Group -->
+						<div class="input-group">
+							<input type="number" class="form-control" value="1">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+									Add to Cart
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 2 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="{% static 'main/images/jars.jpg' %}" alt="">
+					</a>
+					<div class="caption">
+						<h3>{{ tag.item2 }}</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price"><s>$24.99</s> $18.99</p>
+
+						<!-- Input Group -->
+						<div class="input-group">
+							<input type="number" class="form-control" value="1">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+									Add to Cart
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 3 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="{% static 'main/images/pot.jpg' %}" alt="">
+					</a>
+					<div class="caption">
+						<h3>{{ tag.item3 }}</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$11.50</p>
+
+						<!-- Input Group -->
+						<div class="input-group">
+							<input type="number" class="form-control" value="1">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+									Add to Cart
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 4 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="{% static 'main/images/teapot.jpg' %}" alt="">
+					</a>
+					<div class="caption">
+						<h3>{{ tag.item4 }}</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$45.50</p>
+
+						<!-- Input Group -->
+						<div class="input-group">
+							<input type="number" class="form-control" value="1">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+									Add to Cart
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div><!-- /.container -->
+
+
+	<div class="container text-center">
+		<h1>{{ tag.service_heading }}</h1>
+		<p class="lead">{{ tag.service_description }}</p>
+		<img class="img-responsive img-circle center-block" src="{% static 'main/images/service.jpg' %}" alt="">
+	</div><!--/.container-->
+	{% endfor %}
+{% endblock %}
