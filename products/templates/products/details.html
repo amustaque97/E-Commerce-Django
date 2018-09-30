@@ -1,0 +1,47 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block css %}
+<!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+<link href="{% static 'products/css/details.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+                <div class="col-md-offset-2 col-md-9">
+                	<div class="artist-data">
+                    	<div class="artst-pic pull-left">
+                    		<!-- <span class="artst-like"><a href="#"><i class="glyphicon glyphicon-heart-empty"></i></a></span>
+                    		<span class="artst-share"><a href="#"><i class="glyphicon glyphicon-share"></i></a></span>
+                    		<span class="artst-plus"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i></a></span>
+                    		<a href="#"> -->
+                    			<img src="{{ product_details.product_image }}" alt="" class="img-responsive" />
+                    		<!-- </a> -->
+                    	</div>
+                        <div class="artst-prfle pull-right">
+                          {% if product_details.product_quantity < 2 %}
+                            <span class="btn btn-danger btn-xs">Low Stock</span>
+                          {% elif product_details.product_quantity < 10 %}
+                            <span class="btn btn-warning btn-xs">Stock will end soon! Hurry Up</span>
+                          {% endif %}
+                        	<div class="art-title">
+                            	<h1> {{ product_details.product_title }} </h1>
+                            </div>
+                            <div class="">
+                            	<p>{{ product_details.product_description }}</p>
+                              <span class="artst-sub"><span class="daysago">{{ product_details.created_at }}</span></span>
+                              <div class="col-md-3 center">
+                                <button type="button" name="button" class="btn btn-success btn-block">Add to Cart</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br>
+</div>
+
+{% endblock %}
