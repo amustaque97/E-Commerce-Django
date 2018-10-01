@@ -7,7 +7,13 @@
   <body>
     cart
     <br>
-    {{ flash_messages|pprint }}
-    {{ session | pprint }}
+    
+    {{ session | pprint}}  
+    
+    <br>
+    Item Added
+
+    <br>
+    <a href="{% url 'cart-empty' %}" class="btn-danger btn-sm btn">Empty Cart!</a>
   </body>
 </html>
