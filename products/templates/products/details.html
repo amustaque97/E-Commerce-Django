@@ -33,7 +33,12 @@
                             	<p>{{ product_details.product_description }}</p>
                               <span class="artst-sub"><span class="daysago">{{ product_details.created_at }}</span></span>
                               <div class="col-md-3 center">
-                                <button type="button" name="button" class="btn btn-success btn-block">Add to Cart</button>
+
+                                <form class="" action="/cart/add" method="post">
+                                  {% csrf_token %}
+                                  <input type="hidden" name="item" value="{{ product_details.id }}">
+                                  <button type="submit" name="button" class="btn btn-success btn-block">Add to Cart</button>
+                                </form>
                               </div>
                             </div>
                         </div>
