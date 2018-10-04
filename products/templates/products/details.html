@@ -31,23 +31,15 @@
                             </div>
                             <div class="">
                             	<p>{{ product_details.product_description }}</p>
+                              <h5>Rs {{ product_details.product_price }}</h5>
                               <span class="artst-sub"><span class="daysago">{{ product_details.created_at }}</span></span>
                               <div class="col-md-3 center">
-<<<<<<< HEAD
-
-                                <form class="" action="/cart/add" method="post">
-                                  {% csrf_token %}
-                                  <input type="hidden" name="item" value="{{ product_details.id }}">
-                                  <button type="submit" name="button" class="btn btn-success btn-block">Add to Cart</button>
-                                </form>
-=======
                                 <!-- <form action="/cart/add/{{ product_details.id }}" method="post">
                                     {% csrf_token %}
                                     <button type="submit" name="button" class="btn btn-success btn-block">Add to Cart</button>
                                     <a href=""></a>
                                 </form> -->
                                 <a href="/cart/add/{{ product_details.id }}" class="btn btn-success btn-block">Add to Cart</a>
->>>>>>> 3921a3b192767fdf6f5640e97e16760ce3f7dee2
                               </div>
                             </div>
                         </div>

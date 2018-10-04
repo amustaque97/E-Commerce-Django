@@ -7,6 +7,7 @@ class Products(models.Model):
     product_title = models.CharField(max_length=200,unique=True)
     product_slug = models.SlugField(unique=True)
     product_image = models.TextField()
+    product_price = models.PositiveIntegerField()
     product_quantity = models.PositiveIntegerField()
     product_description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
